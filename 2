@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+	int as;
+	int num[as];
+	int temp;
+	
+	
+	cout<<"Selection Sorting...."<<endl;
+	cout<<"Enter the array size: "; 
+	cin>>as;
+	cout<<"Enter the "<<as<<" elements: ";
+	
+	for(int i=0; i<as; i++)
+	{
+		cin>>num[i];
+	}
+	
+	for(int i=0; i<as-1; i++){
+		for(int j= i+1; j<as; j++){
+			if(num[i] > num[j]){
+				temp = num[i];
+				num[i] = num[j];
+				num[j] = temp;
+			}
+		}
+	}
+	
+	for(int i=0; i<as; i++){
+		cout<<num[i]<<" ";
+	}
+}
